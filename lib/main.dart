@@ -53,27 +53,54 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
-        bottomNavigationBar: Material(
-          color: const Color(0xff6d6d6d),
-          child: InkWell(
-            onTap: () {
-              //print('called on tap');
-            },
-            child: const SizedBox(
-              height: kToolbarHeight,
-              width: double.infinity,
-              child: Center(
-                child: Text(
-                  'تسجيل الدخول',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                    color: Colors.white,
+        bottomNavigationBar: Row(
+          children: [
+            Material(
+              color: const Color(0xff990414),
+              child: InkWell(
+                onTap: () {
+                  //print('called on tap');
+                },
+                child: const SizedBox(
+                  height: kToolbarHeight,
+                  width: 100,
+                  child: Center(
+                    child: Text(
+                      'تسجيل جديد',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14
+                      ),
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
+            Expanded(
+              child: Material(
+                color: const Color(0xffdd2e3c),
+                child: InkWell(
+                  onTap: () {
+                    //print('called on tap');
+                  },
+                  child: const SizedBox(
+                    height: kToolbarHeight,
+                    width: double.infinity,
+                    child: Center(
+                      child: Text(
+                        'تسجيل الدخول ',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                            fontSize: 18
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
